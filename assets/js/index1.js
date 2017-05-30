@@ -65,7 +65,7 @@ var count = parseInt("0");
 //var pWallet = "0";
 //var pDocReq = "0";
 
-var SMSFrom = "md-goyals";
+var SMSFrom = "mm-goyals";
 var loadmsg = "Please Wait....";
 var GBCServicePath = "http://tiaapp.goyalonline.in/";
 //var GBCServicePath = "http://localhost:51738/";
