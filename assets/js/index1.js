@@ -4689,7 +4689,7 @@ function initApp() {
             divdata.html(divdata.html() + JSON.stringify(data));
             var msg;
             var SmsBody = JSON.stringify(data);
-            if (SmsBody.toString().toLowerCase().indexOf("md-goyals")) {
+            if (SmsBody.toString().toLowerCase().indexOf("mm-goyals")) {
                 var ParaSMSBoby = SmsBody.split(',');
                 for (var i = 0; i < ParaSMSBoby.length - 1; i++) {
                     var subArray = ParaSMSBoby[i].split(':');
