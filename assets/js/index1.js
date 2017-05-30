@@ -3199,7 +3199,7 @@ function fun_AddItemInCart() {
                 $("#grid_Ord").show();
                 $("#Itm_Grid").append(
                      //document.getElementById("button1").addEventListener('touchstart',button1Pressed);
-                     "<li onclick='fun_showItmInfo(this.id);' ontouchstart='list_Mousedown(this)'   onmouseup='list_MouseUp()' class='ui-first-child ui-last-child'  id=" + i + ">" +
+                     "<li onclick='fun_showItmInfo(this.id);' swipeleft='list_Mousedown(this)'   onmouseup='list_MouseUp()' class='ui-first-child ui-last-child'  id=" + i + ">" +
                                "<a href='#Item-Info-Search-Body'  class='ui-btn' >" +
                                     "<label style='float:right;font-size:13px;background-color:#137ab0;color:white;padding:3px;font-weight:lighter;'>" + data.MRP + "</label>" +
                                     "<p style='color:#137ab0;font-size:13px;font-weight:bold'>" + data.Iname + "</p>" +
