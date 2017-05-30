@@ -209,9 +209,12 @@ function cliencode_check() {
             window.location = "Retailer.html";
         }
         else {
-           // var clientcode = localStorage.getItem("ClientCode");
-             {
+            var clientcode = localStorage.getItem("ClientCode");
+            if (clientcode == "01437_") {
                 window.location = "SRepresentation.html"
+            }
+            else {
+                window.location = "Retailer.html";
             }
             
         }
