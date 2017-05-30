@@ -15,7 +15,7 @@
 
     <!--SMS-->
     <script src="js/jquery.js"></script>
-     <script src="js/SmsInboxPlugin.js"></script>
+    <script src="js/SmsInboxPlugin.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
     <!--for autocomplete-->
     <script type="text/javascript" src="js/jquery-ui-1.10.3.js"></script>
@@ -366,7 +366,7 @@
             </div>
             <script type="text/javascript">jssor_1_slider_init();</script>
             <!-- changeup-->
-            <div data-role="panel" style="background-color:rgba(85, 85, 85, 0.87)" data-display="overlay" id="outside" data-theme="a">
+            <div data-role="panel" style="background-color: rgba(85, 85, 85, 0.87)" data-display="overlay" id="outside" data-theme="a">
 
 
                 <ul data-role="listview">
@@ -571,7 +571,7 @@
                 <input type="text" placeholder="Enter Doctor Name" data-theme="a" id="txtDocName" onblur="SetDocName('1')" />
                     </div>-->
                 <label>Email-Id</label>
-                <input type="email" placeholder="Email Id" data-theme="a" id="txtemail"  />
+                <input type="email" placeholder="Email Id" data-theme="a" id="txtemail" />
                 <div id="div_statecity">
                     <label for="selState">State Name <a id="ast" style="display: none" href="#popupInfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext">i</a></label>
                     <input type="text" onblur="CheckListValidation('1')" placeholder="State Name" data-theme="a" id="selState" data-type="search" />
@@ -874,31 +874,26 @@
                     </center>
             </div>
         </div>
-        <div data-role="footer" data-position="fixed" class="my-footer">
-            <a onclick="BackButton()" data-icon="carat-l" data-iconpos="notext" style="float: left;" class="footer-img">Back</a>
-            <a href="#page-con" data-transition="flip" data-icon="home" data-iconpos="notext" class="footer-img">home</a>
-            <a data-icon="action" data-iconpos="notext" class="footer-img" onclick="fun_cancel()">exit</a>
-            <a data-icon="carat-r" data-iconpos="notext" style="margin: 10px; float: right" class="footer-img" onclick="SaveOrder()">next</a>
-        </div>
-    </div>
 
-    <div data-role="page" id="ImageSelect" class="jqm-demos">
-        <div data-role="header" data-position="fixed" class="jqm-header">
-            <img id="Img5" src="assets/img/green.gif" alt="Online" class="ui-btn-left alert-imgOn activeImg">
-            <div class="display-none" id="Div3">
-                <a href="#Item-cart" data-transition="flip">
-                    <img id="img6" src="assets/img/icon-cart.png" alt="Cart" class="cart-img" onclick="fun_showCart()">
-                    <label onclick="fun_showCart()" id="Label1" class="ui-btn-right " style="display: none; text-indent: 1px; padding: 5px; background-color: #4b4b4b; color: white; border-radius: 19px; font-weight: bold; font-size: 11px;"></label>
-                </a>
-            </div>
-            <h2 id="h5" class="GenralizedApHeading" style="font-weight: normal; color: white; text-align: center; width: 76vw; margin: 0 10vw"></h2>
-            <center>
+        <!--</div>-->
+
+        <div data-role="page" id="ImageSelect" class="jqm-demos">
+            <div data-role="header" data-position="fixed" class="jqm-header">
+                <img id="Img5" src="assets/img/green.gif" alt="Online" class="ui-btn-left alert-imgOn activeImg">
+                <div class="display-none" id="Div3">
+                    <a href="#Item-cart" data-transition="flip">
+                        <img id="img6" src="assets/img/icon-cart.png" alt="Cart" class="cart-img" onclick="fun_showCart()">
+                        <label onclick="fun_showCart()" id="Label1" class="ui-btn-right " style="display: none; text-indent: 1px; padding: 5px; background-color: #4b4b4b; color: white; border-radius: 19px; font-weight: bold; font-size: 11px;"></label>
+                    </a>
+                </div>
+                <h2 id="h5" class="GenralizedApHeading" style="font-weight: normal; color: white; text-align: center; width: 76vw; margin: 0 10vw"></h2>
+                <center>
             <img src="assets/img/Header.png" style="width:150px;height:40px;margin-top:5px;border-radius:10px;" alt="jQuery Mobile" >
                 </center>
-        </div>
-        <div role="main" class="ui-content">
-            <div class="body-with-shadow">
-                <center> 
+            </div>
+            <div role="main" class="ui-content">
+                <div class="body-with-shadow">
+                    <center> 
             <label class="theme-color-txt-red" style="font-size:16px;padding:0px;">Prescription</label>   
             <p style="margin:0px;">You can upload prescription here..</p>    
         <div class="full_image">
@@ -929,10 +924,16 @@
              </center> 
             </table> 
                 </center>
+                </div>
             </div>
         </div>
+        <div data-role="footer" data-position="fixed" class="my-footer">
+            <a onclick="BackButton()" data-icon="carat-l" data-iconpos="notext" style="float: left;" class="footer-img">Back</a>
+            <a href="#page-con" data-transition="flip" data-icon="home" data-iconpos="notext" class="footer-img">home</a>
+            <a data-icon="action" data-iconpos="notext" class="footer-img" onclick="fun_cancel()">exit</a>
+            <a data-icon="carat-r" data-iconpos="notext" style="margin: 10px; float: right" class="footer-img" onclick="SaveOrder()">next</a>
+        </div>
     </div>
-
     <div data-role="page" id="Item-Info-Search-Body" data-title="Inbox" class="jqm-demos">
 
         <div data-role="header" data-position="fixed" class="jqm-header">
@@ -1081,7 +1082,7 @@
                                 <center>
                                     <img  id="Img16" src="assets/img/No_image.png" alt="NoImage" onclick="FullSize()" style="width:250px;height:130px"/>
                                 </center>
-                                
+
                             </td>
                         </tr>
                         <tr>
