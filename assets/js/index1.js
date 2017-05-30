@@ -67,8 +67,8 @@ var count = parseInt("0");
 
 var SMSFrom = "md-goyals";
 var loadmsg = "Please Wait....";
-//var GBCServicePath = "http://tiaapp.goyalonline.in/";
-var GBCServicePath = "http://localhost:51738/";
+var GBCServicePath = "http://tiaapp.goyalonline.in/";
+//var GBCServicePath = "http://localhost:51738/";
 var pictureSource;
 var destinationType;
 var folderPath = "file:///storage/sdcard0";
