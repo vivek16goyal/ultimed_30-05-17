@@ -67,8 +67,8 @@ var count = parseInt("0");
 
 var SMSFrom = "md-goyals";
 var loadmsg = "Please Wait....";
-var GBCServicePath = "http://tiaapp.goyalonline.in/";
-//var GBCServicePath = "http://localhost:51738/";
+//var GBCServicePath = "http://tiaapp.goyalonline.in/";
+var GBCServicePath = "http://localhost:51738/";
 var pictureSource;
 var destinationType;
 var folderPath = "file:///storage/sdcard0";
@@ -516,29 +516,29 @@ function sch_mas() {
                     mm = parseInt(today.getMonth() + 1); //January is 0!
                     yyyy = parseInt(today.getFullYear());
 
-                    if (dd < date && mm < month) {
+                    if (dd <= date && mm <= month) {
                        
-                        $("sm_free").text("For" + qty + "We Have" + free + "free");
+                        $("#sm_free").text("For" + qty + "We Have" + free + "free");
                     }
                     else {
-                        $("sm_free").text("No Scheme Available");
+                        $("#sm_free").text("No Scheme Available");
                     }
                 }
 
                 else {
-                    $("sm_free").text("No Scheme Available");
+                    $("#sm_free").text("No Scheme Available");
                 }
                 // $("#lblRetailrate")
                 if (data == 0 ) {
                     $("#sm_free").text("No scheme available");
                     qty = "";
                 } else {
-                    if (dd < date && mm < month) {
+                    if (dd <= date && mm <= month) {
 
-                        $("sm_free").text("For" + qty + "We Have" + free + "free");
+                        $("#sm_free").text("For" + qty + "We Have" + free + "free");
                     }
                     else {
-                        $("sm_free").text("No Scheme Available");
+                        $("#sm_free").text("No Scheme Available");
                     }
                 }
             }
@@ -2722,7 +2722,7 @@ $(function () {
                     dataType: "json",
                     cache: false,
                     success: function (data) {
-                        // debugger;
+                         debugger;
                         response($.map(data, function (item, id) {
                             if (item.INAME.indexOf("$") == 0) {
                                 ShowErrorFromServer(item.INAME);
@@ -2823,6 +2823,8 @@ function new_item() {
     $("#lblRetailrate").text("0");
     $("#lblRate").text("0");
     $("#lblContent").text("0");
+    $("#txt-qty").text("0");
+    $("#txt-free").text("0");
     fun_showItmInfo("#");
 }
 function ClearItemInfo() {
@@ -2835,6 +2837,10 @@ function ClearItemInfo() {
     $("#sm_free").text("");
     $("#itm-srch").val("");
     $("#itm-srch").text("");
+    $("#txt-qty").val("");
+    $("#txt-qty").text("");
+    $("#txt-free").val("");
+    $("#txt-free").text("");
 
 
 
@@ -2920,7 +2926,7 @@ function discount() {
 }
 function fun_AddToCartCont() {
     loadmsg = "Please Wait...";
-    $(".show-page-loading-msg").click();
+    //$(".show-page-loading-msg").click();
     InsertDataToarray();
     ShowNxtWind();
 }

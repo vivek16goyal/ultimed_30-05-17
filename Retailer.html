@@ -874,8 +874,13 @@
                     </center>
             </div>
         </div>
-
-        <!--</div>-->
+         <div data-role="footer" data-position="fixed" class="my-footer">
+            <a onclick="BackButton()" data-icon="carat-l" data-iconpos="notext" style="float: left;" class="footer-img">Back</a>
+            <a href="#page-con" data-transition="flip" data-icon="home" data-iconpos="notext" class="footer-img">home</a>
+            <a data-icon="action" data-iconpos="notext" class="footer-img" onclick="fun_cancel()">exit</a>
+            <a data-icon="carat-r" data-iconpos="notext" style="margin: 10px; float: right" class="footer-img" onclick="SaveOrder()">next</a>
+        </div>
+        </div>
 
         <div data-role="page" id="ImageSelect" class="jqm-demos">
             <div data-role="header" data-position="fixed" class="jqm-header">
@@ -927,13 +932,8 @@
                 </div>
             </div>
         </div>
-        <div data-role="footer" data-position="fixed" class="my-footer">
-            <a onclick="BackButton()" data-icon="carat-l" data-iconpos="notext" style="float: left;" class="footer-img">Back</a>
-            <a href="#page-con" data-transition="flip" data-icon="home" data-iconpos="notext" class="footer-img">home</a>
-            <a data-icon="action" data-iconpos="notext" class="footer-img" onclick="fun_cancel()">exit</a>
-            <a data-icon="carat-r" data-iconpos="notext" style="margin: 10px; float: right" class="footer-img" onclick="SaveOrder()">next</a>
-        </div>
-    </div>
+       
+    
     <div data-role="page" id="Item-Info-Search-Body" data-title="Inbox" class="jqm-demos">
 
         <div data-role="header" data-position="fixed" class="jqm-header">
