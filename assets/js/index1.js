@@ -210,7 +210,7 @@ function cliencode_check() {
         }
         else {
             var clientcode = localStorage.getItem("ClientCode");
-            if (clientcode == "01437_") {
+            if (clientcode == PCODE) {
                 window.location = "SRepresentation.html"
             }
             else {
