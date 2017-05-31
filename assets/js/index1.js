@@ -175,7 +175,7 @@ function onDeviceReady() {
         //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
         document.addEventListener("deviceready", HideWaiting, true);
         document.addEventListener("backbutton", BackButton, true);
-        document.addEventListener("pause", BackButton, false);
+        document.addEventListener("pause", pause, false);
         document.addEventListener("resume", Resume, true);
         window.location.href = "#page-con";
         var pa = setInterval(
@@ -666,14 +666,18 @@ function BackButton() {
     }
 
 }
+function pause()
+{
+    link = window.location.href.toString();
 
+}
 function Resume() {
     $(".hide-page-loading-msg").click();
     //var link = window.location.href.toString();
 
     var r = link.split('#');
-    $("#ordSaveprog").hide();
-    $("#Div11").hide();
+    //$("#ordSaveprog").hide();
+    //$("#Div11").hide();
     switch (r[1]) {
         case "page-con":
             window.location.href = "#page-con";
