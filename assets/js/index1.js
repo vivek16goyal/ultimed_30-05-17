@@ -175,6 +175,7 @@ function onDeviceReady() {
         document.addEventListener("deviceready", HideWaiting, true);
         document.addEventListener("backbutton", BackButton, true);
         document.addEventListener("pause", BackButton, false);
+        document.addEventListener("resume", BackButton, true);
         window.location.href = "#page-con";
         var pa = setInterval(
             function ab() {
@@ -1112,6 +1113,7 @@ function CheckMono() {
                     //}
                     //else 
                     {
+                        debugger;
                         //$(".hide-page-loading-msg").click();                    
                         SendingOTP();
                         // ReadOTP();
@@ -1191,6 +1193,7 @@ function SendingOTP() {
             cache: false,
             success: function (data) {
                 if (data == "1") {
+                    debugger;
                     clearInterval(showIntval1);
                     $(".show-page-loading-msg").click();
                     localStorage.setItem("OTP", localStorage.getItem("randomNo"));
@@ -4717,14 +4720,20 @@ function initApp() {
                             stopWatch();
                             closeVerificationRegCode();
                         }
-                        if (msg.toString().toLowerCase().indexOf(localStorage.getItem("OTpMsgBody").toString().toLocaleLowerCase()) >= 0) {
-                            if (msg.toString().toLowerCase().indexOf(localStorage.getItem("OTP")) >= 0) {
+                        if (msg.toString().toLowerCase().indexOf(localStorage.getItem("OTpMsgBody").toString().toLocaleLowerCase()) >= 0)
+                        {
+                            var z = localStorage.getItem("OTP");
+                            z = z.toString().toLowerCase();
+                            if (msg.toString().toLowerCase().indexOf(z) >= 0)
+                            {
                                 $("#txtotp").val(localStorage.getItem("OTP"));
-                                closeVerification();
                                 CheckOTP();
+                                closeVerification();
+                               
 
                             }
-                            else {
+                            else
+                            {
                             }
                         }
                         else {
