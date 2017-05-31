@@ -681,25 +681,39 @@ function Resume() {
     switch (r[1]) {
         case "page-con":
             window.location.href = "#page-con";
+            break;
+
         case "divRegi":
             window.location.href = "#divRegi";
             break;
         case "Item-Info-Search":
             window.location.href = "#Item-Info-Search";
+            break;
+
         case "profile":
             window.location.href = "#profile";
+            break;
+
         case "saleRpt":
             window.location.href = "#saleRpt";
+            break;
+
         case "div-offer":
             window.location.href = "#page-con";
             break;
         case "Item-Info-Search-Body":
             window.location.href = "#Item-Info-Search-Body";
+            break;
+
         case "ImageSelect":
             if (activemenu == 'O') {
                 window.location.href = "#Item-Info-Search";
+                break;
+
             } else {
                 window.location.href = "#page-con";
+                break;
+
             }
             break;
         case "Item-cart":
@@ -713,6 +727,8 @@ function Resume() {
             break;
         default:
             window.location.href = "#page-con";
+            break;
+
     }
 
 }
