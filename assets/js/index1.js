@@ -173,10 +173,10 @@ function onDeviceReady() {
         $("#imgcheck").show();
         $("#on").hide();
         //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-        document.addEventListener("deviceready", HideWaiting(), true);
-        document.addEventListener("backbutton", BackButton(), true);
-        document.addEventListener("pause", BackButton(), false);
-        document.addEventListener("resume", Resume(), true);
+        document.addEventListener("deviceready", HideWaiting, true);
+        document.addEventListener("backbutton", BackButton, true);
+        document.addEventListener("pause", BackButton, false);
+        document.addEventListener("resume", Resume, true);
         window.location.href = "#page-con";
         var pa = setInterval(
             function ab() {
