@@ -53,6 +53,7 @@ var emrg;
 var incre = "0";
 var Remark = "";
 var count = parseInt("0");
+var link;
 //////*********************Generlized App*****************************//////////////
 //var APPType = "@"; 
 //var Heading = "TiaERP@ConsumerApp";
@@ -172,10 +173,10 @@ function onDeviceReady() {
         $("#imgcheck").show();
         $("#on").hide();
         //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-        document.addEventListener("deviceready", HideWaiting, true);
-        document.addEventListener("backbutton", BackButton, true);
-        document.addEventListener("pause", BackButton, false);
-        document.addEventListener("resume", BackButton, true);
+        document.addEventListener("deviceready", HideWaiting(), true);
+        document.addEventListener("backbutton", BackButton(), true);
+        document.addEventListener("pause", BackButton(), false);
+        document.addEventListener("resume", Resume(), true);
         window.location.href = "#page-con";
         var pa = setInterval(
             function ab() {
@@ -605,7 +606,7 @@ function SendLedgerEmail() {
 //change uup
 function Forward() {
     $(".hide-page-loading-msg").click();
-    var link = window.location.href.toString();
+     link = window.location.href.toString();
     var r = link.split('#');
 
     switch (r[1]) {
@@ -625,6 +626,7 @@ function Forward() {
 function BackButton() {
     $(".hide-page-loading-msg").click();
     var link = window.location.href.toString();
+
     var r = link.split('#');
     $("#ordSaveprog").hide();
     $("#Div11").hide();
@@ -665,6 +667,51 @@ function BackButton() {
 
 }
 
+function Resume() {
+    $(".hide-page-loading-msg").click();
+    //var link = window.location.href.toString();
+
+    var r = link.split('#');
+    $("#ordSaveprog").hide();
+    $("#Div11").hide();
+    switch (r[1]) {
+        case "page-con":
+            window.location.href = "#page-con";
+        case "divRegi":
+            window.location.href = "#divRegi";
+            break;
+        case "Item-Info-Search":
+            window.location.href = "#Item-Info-Search";
+        case "profile":
+            window.location.href = "#profile";
+        case "saleRpt":
+            window.location.href = "#saleRpt";
+        case "div-offer":
+            window.location.href = "#page-con";
+            break;
+        case "Item-Info-Search-Body":
+            window.location.href = "#Item-Info-Search-Body";
+        case "ImageSelect":
+            if (activemenu == 'O') {
+                window.location.href = "#Item-Info-Search";
+            } else {
+                window.location.href = "#page-con";
+            }
+            break;
+        case "Item-cart":
+            window.location.href = "#Item-Info-Search";
+            break;
+        case "Vrdetail":
+            Order_click();
+            break;
+        case "altITem":
+            history.back(1);
+            break;
+        default:
+            window.location.href = "#page-con";
+    }
+
+}
 function Reload() {
 
     document.getElementById('Img16').src = "";
