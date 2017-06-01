@@ -6978,7 +6978,8 @@ function Resume() {
 
     switch (r[1]) {
         case "page-con":
-            exitApp();
+            window.location.href = "#page-con";
+           // break;
             break;
         case "Vrdetail":
             if (localStorage.getItem("FDName") == "SALE") {
@@ -7004,28 +7005,24 @@ function Resume() {
             }
             break;
         case "Item-Info-Search":
-            if (localStorage.getItem("FDName") == "SALE") {
-                window.location.href = "#page-con";
-            } else {
-                window.location.href = "#Party-Info-Search";
-            }
+           
+            window.location.href = "#Item-Info-Search";
+            
             break;
         case "Item-Info-Search-Body":
             window.location.href = "#Item-Info-Search-Body";
             break;
         case "Item-cart":
-            if (localStorage.getItem("FDName") == "ORDS") {
-                window.location.href = "#OrderItemSearch";
-            } else {
-                window.location.href = "#Item-Info-Search";
-            }
-            break;
-        case "PTDR-Info-Search":
             window.location.href = "#Item-cart";
             break;
+        case "PTDR-Info-Search":
+            window.location.href = "#PTDR-Info-Search";
+            break;
         case "Chng_batch":
+            window.location.href = "#Chng_batch";
+            break;
         case "altITem":
-            window.location.href = "#Item-Info-Search-Body";
+            window.location.href = "#altITem";
             break;
         case "Party-Ldg":
             window.location.href = "#Party-Ldg";
@@ -7046,26 +7043,18 @@ function Resume() {
             window.location.href = "#Receipt-part1";
             break;
         case "div-flag":
-            CheckBillCompletOrNot();
+            window.location.href = "#div-flag";
             break;
         case "div-party-ldgr":
-            if (localStorage.getItem("FDName") == "SALE") {
-                window.location.href = "#PTDR-Info-Search";
-            }
-            else if (localStorage.getItem("FDName") == "PLDG") {
-                window.location.href = "#Party-Ldg";
-            } else if (localStorage.getItem("FDName") == "MNRC" || localStorage.getItem("FDName") == "MNPY") {
-                window.location.href = "#Receipt-part1";
-            }
-            else {
-                window.location.href = "#Party-Info-Search";
-            }
+            
+            window.location.href = "#div-party-ldgr";
+            
             break;
         case "ImageSelect":
-            window.location.href = "#divOrderParty";
+            window.location.href = "#ImageSelect";
             break;
         case "Receipt-part2":
-            window.location.href = "#Receipt-part1";
+            window.location.href = "#Receipt-part2";
             break;
         default:
             CheckBillCompletOrNot();
