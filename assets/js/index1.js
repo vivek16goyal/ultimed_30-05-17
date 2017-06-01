@@ -2465,16 +2465,33 @@ function SetItem_Count() {
             $("#Empty-basket").show();
             $("#Itm_Grid").html("");
             var src = document.getElementById('Img16').src;
+            var image = smallImage.src;
             if (src.indexOf("No_image.png") > 0) {
+
                 $("#Item-grid-table").hide();
             } else {
+                document.getElementById('cart-pre').src = smallImage.src;
                 $("#Item-grid-table").show();
+                $("#cart-pre").show();
+                
             }
 
         } else {
             $("#itm-cnt").show();
             $("#Empty-basket").hide();
             $("#Item-grid-table").show();
+            var src = document.getElementById('Img16').src;
+            var image = smallImage.src;
+            if (src.indexOf("No_image.png") > 0)
+            {
+
+                $("#Item-grid-table").hide();
+            } else {
+                document.getElementById('cart-pre').src = smallImage.src;
+                $("#Item-grid-table").show();
+                $("#cart-pre").show();
+
+            }
         }
         $("#itm-cnt").text("Total " + Number(count) + " Item found");
 
