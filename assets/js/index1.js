@@ -36,7 +36,7 @@ var APPType = "$";
 
 //  3)///////*******A to Z Dava [Demo Version Given To Drug Deal] **********************//////////
 var Heading = "ULTIMED";
-var PCODE = "01437_";
+var PCODE = "ndcda";
 var folderPathImg = "file:///storage/sdcard0/" + PCODE + "/";
 var DownloadPath = "file:///storage/sdcard0/";
 var FolderName = PCODE;
@@ -68,8 +68,8 @@ var link;
 
 var SMSFrom = "mm-goyals";
 var loadmsg = "Please Wait....";
-var GBCServicePath = "http://tiaapp.goyalonline.in/";
-//var GBCServicePath = "http://localhost:51738/";
+//var GBCServicePath = "http://tiaapp.goyalonline.in/";
+var GBCServicePath = "http://localhost:51738/";
 var pictureSource;
 var destinationType;
 var folderPath = "file:///storage/sdcard0";
@@ -707,7 +707,7 @@ function Resume() {
 
         case "ImageSelect":
             if (activemenu == 'O') {
-                window.location.href = "#Item-Info-Search";
+                window.location.href = "#ImageSelect";
                 break;
 
             } else {
@@ -2685,13 +2685,13 @@ function Receive(filename) {
                             function (entry) {
                                 //document.getElementById(imgId).src = DownloadPath;                                
                                 document.getElementById('Img16').src = DownloadPath;
-                                //  document.getElementById('cart-pre').src = DownloadPath;
-                                document.getElementById('img_1').src = DownloadPath;
-                                document.getElementById('img_2').src = DownloadPath;
-                                document.getElementById('img_3').src = DownloadPath;
+                                document.getElementById('cart-pre').src = DownloadPath;
+                                //document.getElementById('img_1').src = DownloadPath;
+                                //document.getElementById('img_2').src = DownloadPath;
+                                //document.getElementById('img_3').src = DownloadPath;
 
-                                document.getElementById('img_4').src = DownloadPath;
-                                document.getElementById('img_5').src = DownloadPath;
+                                //document.getElementById('img_4').src = DownloadPath;
+                                //document.getElementById('img_5').src = DownloadPath;
                                 document.getElementById('sel_image').src = DownloadPath;
                                 localStorage.setItem("ImagePath", DownloadPath);
                                 fun_showCart();
