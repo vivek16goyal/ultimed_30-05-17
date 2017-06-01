@@ -68,8 +68,8 @@ var link;
 
 var SMSFrom = "mm-goyals";
 var loadmsg = "Please Wait....";
-//var GBCServicePath = "http://tiaapp.goyalonline.in/";
-var GBCServicePath = "http://localhost:51738/";
+var GBCServicePath = "http://tiaapp.goyalonline.in/";
+//var GBCServicePath = "http://localhost:51738/";
 var pictureSource;
 var destinationType;
 var folderPath = "file:///storage/sdcard0";
@@ -666,8 +666,7 @@ function BackButton() {
     }
 
 }
-function pause()
-{
+function pause() {
     link = window.location.href.toString();
     var r = link.split('#');
     $("#ordSaveprog").hide();
@@ -678,7 +677,7 @@ function pause()
             navigator.app.exitApp();
             break;
         case "divRegi":
-            
+
             break;
         case "Item-Info-Search":
         case "profile":
@@ -706,6 +705,7 @@ function pause()
         default:
             window.location.href = "#page-con";
 
+    }
 }
 function Resume() {
     $(".hide-page-loading-msg").click();
