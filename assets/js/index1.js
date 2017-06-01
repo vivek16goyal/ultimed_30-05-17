@@ -73,7 +73,7 @@ var GBCServicePath = "http://tiaapp.goyalonline.in/";
 var pictureSource;
 var destinationType;
 var folderPath = "file:///storage/sdcard0";
-var Flag;
+var Flag; 
 var myScroll;
 var activemenu;
 
