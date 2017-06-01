@@ -68,8 +68,8 @@ var link;
 
 var SMSFrom = "mm-goyals";
 var loadmsg = "Please Wait....";
-var GBCServicePath = "http://tiaapp.goyalonline.in/";
-//var GBCServicePath = "http://localhost:51738/";
+//var GBCServicePath = "http://tiaapp.goyalonline.in/";
+var GBCServicePath = "http://localhost:51738/";
 var pictureSource;
 var destinationType;
 var folderPath = "file:///storage/sdcard0";
@@ -669,6 +669,42 @@ function BackButton() {
 function pause()
 {
     link = window.location.href.toString();
+    var r = link.split('#');
+    $("#ordSaveprog").hide();
+    $("#Div11").hide();
+    switch (r[1]) {
+        case "page-con":
+            Clear_OrderDetail();
+            navigator.app.exitApp();
+            break;
+        case "divRegi":
+            
+            break;
+        case "Item-Info-Search":
+        case "profile":
+        case "saleRpt":
+        case "div-offer":
+            window.location.href = "#page-con";
+            break;
+        case "Item-Info-Search-Body":
+        case "ImageSelect":
+            if (activemenu == 'O') {
+                window.location.href = "#Item-Info-Search";
+            } else {
+                window.location.href = "#page-con";
+            }
+            break;
+        case "Item-cart":
+            window.location.href = "#Item-Info-Search";
+            break;
+        case "Vrdetail":
+            Order_click();
+            break;
+        case "altITem":
+            history.back(1);
+            break;
+        default:
+            window.location.href = "#page-con";
 
 }
 function Resume() {
@@ -2465,9 +2501,7 @@ function SetItem_Count() {
             $("#Empty-basket").show();
             $("#Itm_Grid").html("");
             var src = document.getElementById('Img16').src;
-            var image = smallImage.src;
             if (src.indexOf("No_image.png") > 0) {
-
                 $("#Item-grid-table").hide();
             } else {
                 $("#Item-grid-table").show();
@@ -3170,7 +3204,7 @@ function fun_showCart() {
     window.location.href = "#Item-cart";
 }
 
-//multiply images for the ultimate
+////multiply images for the ultimate
 //function multimplyimage(imageURI) {
 //    var smallImage = document.getElementById('sel_image');
 //    //$("#cart-pre").hide();
@@ -3262,6 +3296,7 @@ function fun_showCart() {
 //    }
 
 //}
+
 function fun_AddItemInCart() {
     var Total = 0;
     var arr = '';
