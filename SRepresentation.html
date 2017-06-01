@@ -197,7 +197,7 @@
             <img id="img_lnk_back" src="assets/img/back.png" alt="Back" class="ui-btn-left alert-imgOn" style="display: none; margin-left: 20px; cursor: pointer;">
             <a id="lnk_login" href="#Login" data-rel="popup" data-transition="flip" data-position-to="window" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-user ui-nodisc-icon ui-alt-icon ui-btn-right " style="background-color: white; display: none;">Login</a>
             <a id="lnk_logout" class="jqm-search-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-power ui-nodisc-icon ui-alt-icon ui-btn-right" style="background-color: white; display: none;" onclick="logout('1')">Logout</a>
-           <center><h2 id="heading" style="vertical-align:middle;"><img id="imgheading" src ="assets/img/Header.png" style="width:140px;height:40px;margin-top:6px;"/></h2></center> 
+            <center><h2 id="heading" style="vertical-align:middle;"><img id="imgheading" src ="assets/img/Header.png" style="width:140px;height:40px;margin-top:6px;"/></h2></center>
         </div>
         <div role="main" id="Homepage">
             <div id="menu-side-bar">
@@ -654,11 +654,20 @@
                                     <label id="lblbxsz" style="padding-left: 10px;"></label>
                                 </td>
                             </tr>
+                            <tr style="height: 10px;">
+                                <td>
+                                    <p>Scheme:</p>
+                                </td>
+                                <td>
+                                    <label id="sm_free" style="margin-left: 5px;"></label>
+                                </td>
+
+                            </tr>
                         </table>
                         <span>Genric:                            
                                 <a href="#altITem" data-transition="slidedown" onclick="SubstitudeItemList()" id="lblContent" style="margin-left: 5px; width: 80%; word-wrap: break-word; display: inline-block;"></a>
                         </span>
-
+                        
 
                         <table style="width: 100%; display: inline-block;" cellpadding="0">
                             <tr id="row-qty">
@@ -672,7 +681,7 @@
 
                                             </td>
                                             <td>
-                                                <input type="number" min="1" data-theme="a" id="txt-free" placeholder="Free" style="display: inline;" pattern="[0-9]" />
+                                                <input type="number" min="1" data-theme="a" id="txt-free" placeholder="Free" style="display: inline;" pattern="[0-9]" readonly="true" />
 
                                             </td>
 
@@ -1776,7 +1785,7 @@
                         <span style="float: right"><a href="#div-partyMst" data-transition="flip" style="background-color: #1390cf; border-radius: 5px; padding: 2vmin">
                             <img src="assets/img/plus.png" alt="Add Party"></a></span>
                     </label>
-                    <input type="text" id="txtOrderParty"  placeholder="Enter Party Name..." data-theme="a" onchange="serchtxt_clear(this,'8');" data-type="search" />
+                    <input type="text" id="txtOrderParty" placeholder="Enter Party Name..." data-theme="a" onchange="serchtxt_clear(this,'8');" data-type="search" />
                     <center>
                         <div id="div10" class="display-none">
                             <p style="margin:0px;padding:0px;" id="txtOrderParty-add"></p>

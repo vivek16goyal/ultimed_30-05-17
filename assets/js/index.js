@@ -30,6 +30,7 @@ var maxSize = 65535;
 var VrRcptCount = 0;
 var MISScroll, SaleScroll, RcptTabl;
 var localFdname;
+var scheme;
 document.addEventListener("deviceready", onReady, false);
 
 function onReady() {
@@ -63,6 +64,71 @@ function loaded() {
     catch (e) {
         alert(e.message);
     }
+}
+function sch_mas() {
+    var icode;
+    icode = scheme;
+    // var qty, free;
+    WebSerUrl = localStorage.getItem("APIURL");
+    {
+        $.ajax({
+            url: WebSerUrl + "/Values/GET_scheme?icode=" + icode,
+            type: "GET",
+            cache: false,
+            success: function (data) {
+                debugger;
+                var res, year, month, date, today, dd, yyyy;
+                if (data != 0) {
+                    //  qty, stdt, eddt, free
+                    debugger;
+                    qty = data[0].QTY;
+                    stdt = data[0].STARTDATE;
+                    eddt = data[0].ENDDATE;
+                    free = data[0].FREE;
+
+                    res = eddt.split("-", 3);
+                    year = parseInt(res[0]);
+                    month = parseInt(res[1]);
+                    date = res[2];
+                    date = parseInt(date.substring(0, 2));
+                    today = new Date();
+                    dd = parseInt(today.getDate());
+                    mm = parseInt(today.getMonth() + 1); //January is 0!
+                    yyyy = parseInt(today.getFullYear());
+
+                    if (dd <= date && mm <= month) {
+
+                        $("#sm_free").text("For" + qty + "We Have" + free + "free");
+                    }
+                    else {
+                        $("#sm_free").text("No Scheme Available");
+                    }
+                }
+
+                else {
+                    $("#sm_free").text("No Scheme Available");
+                }
+                // $("#lblRetailrate")
+                if (data == 0) {
+                    $("#sm_free").text("No scheme available");
+                    qty = "";
+                } else {
+                    if (dd <= date && mm <= month) {
+
+                        $("#sm_free").text("For" + qty + "We Have" + free + "free");
+                    }
+                    else {
+                        $("#sm_free").text("No Scheme Available");
+                    }
+                }
+            }
+
+        });
+
+    }
+
+
+
 }
 function onDeviceReady() {
     clearInterval(timerUpdateLoginTime);
@@ -1790,6 +1856,7 @@ $(function () {
                                 pursize: item.pursize,
                                 GNAME: item.GNAme
                             };
+
                             return mydata;
                         }));
                     },
@@ -1823,6 +1890,7 @@ $(function () {
                 $("#lblContent").text(ui.item.GNAME);
                 ClearItemInfo();
                 HideShowinIntemInfo();
+                
                 loadmsg = "Loading Data...";
                 $(".show-page-loading-msg").click();
                 var FDName = localStorage.getItem("FDName");
@@ -2147,6 +2215,9 @@ $(function () {
                 SetItem_Count();
                 $("#insert_itemInfo").show();
                 $("#update_itemInfo").hide();
+                scheme = ui.item.Icode;
+                debugger;
+                sch_mas();
                 //fun_showItmInfo("#");
             },
             close: function () {
