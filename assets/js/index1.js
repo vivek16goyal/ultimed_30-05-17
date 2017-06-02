@@ -667,15 +667,13 @@ function BackButton() {
 
 }
 function pause() {
-    link = window.location.href.toString();
-   
 
-    
+    link = window.location.href.toString();
+ 
 }
 function Resume() {
     $(".hide-page-loading-msg").click();
     //var link = window.location.href.toString();
-
     var r = link.split('#');
     //$("#ordSaveprog").hide();
     //$("#Div11").hide();
@@ -692,11 +690,9 @@ function Resume() {
         case "Item-Info-Search":
             window.location.href = "#Item-Info-Search";
             break;
-
         case "profile":
             window.location.href = "#profile";
             break;
-
         case "saleRpt":
             window.location.href = "#saleRpt";
             break;
