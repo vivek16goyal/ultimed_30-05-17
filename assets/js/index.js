@@ -4141,7 +4141,7 @@ function fun_AddItemInCart() {
                         $("#grid_QTNW").hide();
                         $("#grid_QTTN").hide();
                         $("#Itm_Grid").append(
-                            "<li onclick='fun_showItmInfo(this.id); 'ontouchstart='list_Mousedown(this)'   ontouchend='list_MouseUp()' class='ui-first-child ui-last-child' id=" + i + ">" +
+                            "<li onclick='fun_showItmInfo(this.id);' ontouchstart='list_Mousedown(this)'  onmousedown='list_Mousedown(this)' onmouseup='list_MouseUp()'  class='ui-first-child ui-last-child' id=" + i + ">" +
                                                     "<a href='#Item-Info-Search-Body' class='ui-btn '>" +
                                                         "<p style='color:#137ab0;font-weight:bold'>" + data.Iname + "</p>" +
                                                         "<label style='float:left;background-color:#137ab0;color:white;padding:3px;font-weight:lighter;'>" + amt + "</label>" +
@@ -4233,18 +4233,16 @@ function RemoveItem(a, listitem) {
         listitem.find(".topic").clone().insertAfter("#P3");
         // Show the confirmation popup
         $("#confirm").popup("open");
-        $("#Div23").popup("open");
+       // $("#Div23").popup("open");
         // Proceed when the user confirms
         $("#confirm #yes").on("click", function () {
             listitem.remove();
-
             RemoveItemFromCart();
             $("#Itm_Grid").listview("refresh");
 
         });
         $("#Div23 #yes1").on("click", function () {
             listitem.remove();
-
             RemoveItemFromCart();
             $("#Itm_Grid").listview("refresh");
 
