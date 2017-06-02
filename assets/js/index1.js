@@ -718,7 +718,9 @@ function Resume() {
         case "page-con":
             window.location.href = "#page-con";
             break;
-
+        case "Homepage":
+            window.location.href = "#Homepage";
+            break; 
         case "divRegi":
             window.location.href = "#divRegi";
             break;
