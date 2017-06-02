@@ -668,44 +668,9 @@ function BackButton() {
 }
 function pause() {
     link = window.location.href.toString();
-    var r = link.split('#');
-    $("#ordSaveprog").hide();
-    $("#Div11").hide();
-    switch (r[1]) {
-        case "page-con":
-            Clear_OrderDetail();
-            navigator.app.exitApp();
-            break;
-        case "divRegi":
+   
 
-            break;
-        case "Item-Info-Search":
-        case "profile":
-        case "saleRpt":
-        case "div-offer":
-            window.location.href = "#page-con";
-            break;
-        case "Item-Info-Search-Body":
-        case "ImageSelect":
-            if (activemenu == 'O') {
-                window.location.href = "#Item-Info-Search";
-            } else {
-                window.location.href = "#page-con";
-            }
-            break;
-        case "Item-cart":
-            window.location.href = "#Item-Info-Search";
-            break;
-        case "Vrdetail":
-            Order_click();
-            break;
-        case "altITem":
-            history.back(1);
-            break;
-        default:
-            window.location.href = "#page-con";
-
-    }
+    
 }
 function Resume() {
     $(".hide-page-loading-msg").click();
